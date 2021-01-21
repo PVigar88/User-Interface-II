@@ -369,6 +369,9 @@ h1 {
   vertical-align: bottom;
   margin-left: 1em;
 }
+h2 {
+  color: silver;
+}
 nav {
   display: flex;
   flex-flow: row wrap;
