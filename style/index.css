@@ -351,23 +351,41 @@ template {
 }
 
 /* END OF RESET NORMALIZE */
+
 body {
   background-color: #30363d;
+}
+#pageContainer {
+  position: relative;
+  min-height: 100vh;
 }
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #0d1117;
+}
+header div {
+  margin: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: 3em;
 }
 h1 {
-  color: silver;
   background-color: #0d1117;
+  /* margin-top: 3em; */
+  display: inline-block;
+  color: silver;
   width: 8em;
-  height: 1.3em;
-  font-size: 2em;
+  height: 2em;
+  font-size: 3em;
   text-align: center;
-  vertical-align: bottom;
-  margin-left: 1em;
+  vertical-align: text-bottom;
+  margin-left: 3em;
+  border-radius: 0.5em;
+  line-height: 2em;
+  margin-top: 0.25em;
 }
 h2 {
   color: silver;
@@ -380,6 +398,9 @@ nav {
   align-content: space-evenly;
   margin: 1em;
   padding: 2em;
+  margin-right: 5em;
+  /* border: 1px solid black; */
+  border-radius: 2em;
 }
 a {
   padding: 1em;
@@ -395,6 +416,8 @@ a {
   justify-content: space-evenly;
   align-items: baseline;
   align-content: space-evenly;
+  margin: 1em;
+  padding-bottom: 2.5em;
 }
 img {
   width: 60%;
@@ -407,17 +430,44 @@ span {
 }
 #projectButton {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  padding-top: 1em;
+}
+/* #imageContainer {
+  border-radius: 2em;
+  background-image: url("../images/Paul_headshot.png");
+  background-repeat: no-repeat;
+} */
+#headshot {
+  border-radius: 3em;
+  width: 30%;
+  /* margin-left: 9em; */
+  margin: 0 0 0 9em;
+}
+#projectButton button {
+  height: 8em;
+  width: 12em;
+  font-size: 2em;
+  background-color: grey;
+  border: 0.25em solid black;
+
+  /* border-radius: 2em; */
 }
 #contactButton {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: flex-end;
+}
+#contactButton button {
+  height: 3em;
+  width: 8em;
+  background-color: grey;
+  margin: auto;
 }
 .gallery {
   display: flex;
@@ -428,11 +478,39 @@ span {
   background-color: black;
   padding: 3em 1px 3em 1px;
   border: 1px solid silver;
-  margin: 1px;
+  margin: 1em;
+  border-radius: 2em;
+}
+.gallery:hover {
+  animation-name: gallery;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 footer {
   background-color: #0d1117;
   height: 10em;
   display: block;
   margin: 0px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+footer img {
+  background-color: #0d1117;
+  width: 3em;
+  padding: 0;
+}
+footer a {
+  background-color: #0d1117;
+  padding: 0;
+}
+/* keyframes */
+@keyframes gallery {
+  from {
+    border-color: silver;
+  }
+  to {
+    border-color: black;
+  }
 }
