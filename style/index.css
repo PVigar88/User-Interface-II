@@ -497,7 +497,7 @@ section {
 }
 footer {
   background-color: #0d1117;
-  height: 10em;
+  height: 10rem;
   /* display: block; */
   margin: 0px;
   bottom: 0;
@@ -506,7 +506,7 @@ footer {
 }
 footer img {
   background-color: white;
-  width: 3em;
+  width: 3rem;
   padding: 0;
   border-radius: 0.5em;
 }
@@ -532,7 +532,7 @@ footer a {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 3rem;
   background-color: teal;
 }
 #contactCard a {
@@ -542,14 +542,14 @@ footer a {
   height: 5em;
   width: auto;
   background-color: white;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
 }
 ul {
   list-style-type: none;
-  line-height: 4em;
+  line-height: 4rem;
 }
 #aboutMe {
-  font-size: 2em;
+  font-size: 2rem;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -558,6 +558,8 @@ ul {
   width: auto;
   max-width: 40%;
   max-height: 80%;
+  /* --aspect-ratio: 6/8; */
+  object-fit: cover;
 }
 #aboutMe div {
   background-color: silver;
@@ -585,6 +587,12 @@ ul {
   }
   .gallery {
     font-size: 1rem;
+  }
+  #aboutMe img {
+    height: 50rem;
+  }
+  #aboutMe {
+    font-size: ;
   }
 }
 @media only screen and (max-width: 500px) {
