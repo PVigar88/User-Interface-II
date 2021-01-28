@@ -365,6 +365,7 @@ header {
   align-items: center;
   background-color: #0d1117;
 }
+
 header div {
   margin: 1em;
   display: flex;
@@ -428,7 +429,7 @@ span {
   color: silver;
   font-size: 2em;
 }
-#projectButton {
+form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -448,11 +449,12 @@ span {
   margin: 0 0 0 9em;
 }
 #projectButton button {
-  height: 8em;
-  width: 12em;
+  height: 10%;
+  width: 50%;
   font-size: 2em;
   background-color: grey;
   border: 0.25em solid black;
+  margin: auto;
 
   /* border-radius: 2em; */
 }
@@ -546,12 +548,32 @@ ul {
   flex-flow: row nowrap;
 }
 #aboutMe img {
-  height: 24em;
+  height: auto;
   width: auto;
+  max-width: 40%;
+  max-height: 80%;
 }
 #aboutMe div {
   background-color: silver;
 }
 #aboutMe div p {
   padding: 1em;
+}
+/* responsiveness */
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 500px) {
+  header {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  h1 {
+    margin-left: 0px;
+  }
+  #headshot {
+    margin-left: 0px;
+  }
+  nav {
+    margin-right: 0px;
+  }
 }
