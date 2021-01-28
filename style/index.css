@@ -592,7 +592,7 @@ ul {
     height: 50rem;
   }
   #aboutMe {
-    font-size: ;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -611,5 +611,8 @@ ul {
   }
   .gallery {
     font-size: 0.5rem;
+  }
+  #aboutMe {
+    font-size: 1rem;
   }
 }
