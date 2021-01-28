@@ -356,8 +356,9 @@ body {
   background-color: #30363d;
 }
 #pageContainer {
-  position: relative;
-  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
 }
 header {
   display: flex;
@@ -365,6 +366,7 @@ header {
   align-items: center;
   background-color: #0d1117;
 }
+
 header div {
   margin: 1em;
   display: flex;
@@ -392,12 +394,12 @@ h2 {
 }
 nav {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
   align-content: space-evenly;
   margin: 1em;
-  padding: 2em;
+  /* padding: 2em; */
   margin-right: 5em;
   /* border: 1px solid black; */
   border-radius: 2em;
@@ -410,9 +412,9 @@ a {
   color: black;
   font-size: 1.25em;
 }
-#galleryPanes {
+.galleryPanes {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: baseline;
   align-content: space-evenly;
@@ -428,7 +430,7 @@ span {
   color: silver;
   font-size: 2em;
 }
-#projectButton {
+form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -448,11 +450,14 @@ span {
   margin: 0 0 0 9em;
 }
 #projectButton button {
-  height: 8em;
-  width: 12em;
-  font-size: 2em;
+  height: 10%;
+  width: 50%;
+  max-width: 315px;
+  max-height: 300px;
+  font-size: 2rem;
   background-color: grey;
-  border: 0.25em solid black;
+  border: 3px solid black;
+  margin: auto;
 
   /* border-radius: 2em; */
 }
@@ -487,18 +492,21 @@ span {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+section {
+  padding-bottom: 2.5rem;
+}
 footer {
   background-color: #0d1117;
-  height: 10em;
-  display: block;
+  height: 10rem;
+  /* display: block; */
   margin: 0px;
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 footer img {
   background-color: white;
-  width: 3em;
+  width: 3rem;
   padding: 0;
   border-radius: 0.5em;
 }
@@ -524,7 +532,7 @@ footer a {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 3rem;
   background-color: teal;
 }
 #contactCard a {
@@ -534,24 +542,77 @@ footer a {
   height: 5em;
   width: auto;
   background-color: white;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
 }
 ul {
   list-style-type: none;
-  line-height: 4em;
+  line-height: 4rem;
 }
 #aboutMe {
-  font-size: 2em;
+  font-size: 2rem;
   display: flex;
   flex-flow: row nowrap;
 }
 #aboutMe img {
-  height: 24em;
+  height: auto;
   width: auto;
+  max-width: 40%;
+  max-height: 80%;
+  /* --aspect-ratio: 6/8; */
+  object-fit: cover;
 }
 #aboutMe div {
   background-color: silver;
 }
 #aboutMe div p {
   padding: 1em;
+}
+/* responsiveness */
+@media only screen and (max-width: 800px) {
+  header {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  header div {
+    margin-top: 0;
+  }
+  h1 {
+    margin-left: 0px;
+  }
+  #headshot {
+    margin-left: 0px;
+  }
+  nav {
+    margin-right: 0px;
+  }
+  .gallery {
+    font-size: 1rem;
+  }
+  #aboutMe img {
+    height: 50rem;
+  }
+  #aboutMe {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+  }
+  h1 {
+    margin-left: 0px;
+  }
+  #headshot {
+    margin-left: 0px;
+  }
+  nav {
+    margin-right: 0px;
+  }
+  .gallery {
+    font-size: 0.5rem;
+  }
+  #aboutMe {
+    font-size: 1rem;
+  }
 }
