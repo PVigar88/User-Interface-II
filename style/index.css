@@ -356,8 +356,9 @@ body {
   background-color: #30363d;
 }
 #pageContainer {
-  position: relative;
-  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
 }
 header {
   display: flex;
@@ -398,7 +399,7 @@ nav {
   align-items: center;
   align-content: space-evenly;
   margin: 1em;
-  padding: 2em;
+  /* padding: 2em; */
   margin-right: 5em;
   /* border: 1px solid black; */
   border-radius: 2em;
@@ -451,9 +452,11 @@ form {
 #projectButton button {
   height: 10%;
   width: 50%;
-  font-size: 2em;
+  max-width: 315px;
+  max-height: 300px;
+  font-size: 2rem;
   background-color: grey;
-  border: 0.25em solid black;
+  border: 3px solid black;
   margin: auto;
 
   /* border-radius: 2em; */
@@ -489,13 +492,16 @@ form {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+section {
+  padding-bottom: 2.5rem;
+}
 footer {
   background-color: #0d1117;
   height: 10em;
-  display: block;
+  /* display: block; */
   margin: 0px;
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 footer img {
@@ -561,11 +567,12 @@ ul {
 }
 /* responsiveness */
 @media only screen and (max-width: 800px) {
-}
-@media only screen and (max-width: 500px) {
   header {
     flex-flow: column nowrap;
     justify-content: center;
+  }
+  header div {
+    margin-top: 0;
   }
   h1 {
     margin-left: 0px;
@@ -575,5 +582,26 @@ ul {
   }
   nav {
     margin-right: 0px;
+  }
+  .gallery {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+  }
+  h1 {
+    margin-left: 0px;
+  }
+  #headshot {
+    margin-left: 0px;
+  }
+  nav {
+    margin-right: 0px;
+  }
+  .gallery {
+    font-size: 0.5rem;
   }
 }
